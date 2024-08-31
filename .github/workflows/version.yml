@@ -1,0 +1,12 @@
+---
+name: "tagged-release"
+
+on:
+  push:
+    branches: [ "develop" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Version
+      run: yq read version version.yml
