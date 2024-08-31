@@ -10,6 +10,10 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
+      - name: Create git tag
+        run: git tag testerino
+      - name: Push git tag
+        run: git push origin testerino
       - name: Set Dist Version
         run: echo "VERSION_NUMBER=$(yq '.version' ./version.yml)" >> $GITHUB_ENV
       - name: Create Tag
