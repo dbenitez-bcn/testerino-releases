@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Version
-      run: yq read version version.yml
+      run: yq --version
