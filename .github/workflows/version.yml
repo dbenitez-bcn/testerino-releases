@@ -8,8 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Clone repository
+      uses: actions/checkout@v4
     - name: Fuck
-      run: yq '.version' version.yml
+      run: yq '.version' ./version.yml
     - name: Version
       run: VERSION_NUMBER=$(xddd)
     - name: Show version!
