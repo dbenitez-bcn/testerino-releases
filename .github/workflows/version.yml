@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Version
-      run: yq -h
+      run: yq '.version' version.yml >> $VERSION_NUMBER
+    - name: Show version!
+      run: echo $VERSION_NUMBER
