@@ -8,7 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Fuck
+      run: yq '.version' version.yml
     - name: Version
-      run: VERSION_NUMBER=$(yq '.version' version.yml)
+      run: VERSION_NUMBER=$(xddd)
     - name: Show version!
       run: echo $VERSION_NUMBER
